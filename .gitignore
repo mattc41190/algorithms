@@ -1,0 +1,11 @@
+
+# Deps
+target
+package.json
+
+# Generated Files and Dirs
+.idea
+
+# Secrets
+__secrets*
+__secret*
