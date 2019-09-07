@@ -61,7 +61,34 @@ Node deletion is the trickiest part of dealing with a BST. There are four possib
 
 #### Deleting A Node That Has a Left and Right Child
 
-The problem: We have a Tree and we want to remove a Node. However the Node we want to remove has a sub-Tree all of its own. How do we remove the Node without breaking the ordering of the tree structure and without accidentally creating any orphan Nodes. 
+Before going any further let's make sure we understand the problem as it stands. We have a Tree and we want to remove a Node. However the Node we want to remove has a sub-Tree all of its own. How do we remove the Node without breaking the ordering of the tree structure and without accidentally creating any orphan Nodes.
+
+The answer is that we want to replace the value at the Node slated for deletion with the value from the "left-most" child of the right child of the Node slated for deletion (refered to as Solution A). 
+
+Equally valid is the mirror of that solution which is to reaplce the value in the Node slated for deletion with the "right-most" child of the left child of the Node slated for delettion.
+
+I know that that is a mouthful, but we will try to explain it in words. To maintain the Tree's order we want any child on the right to be greater than its parent and any Node on the left to be less than its parent. If we take the first solution (Solution A) and put it in practice we might get a tree that looks like this:
+
+![tree-a](tree-a.png)
+
+In the Tree above let's attempt to remove `0014` it has two children `0012` and `0023`. We cannot simply promote the Node's containing the values `0012` or `0023` since they in turn have children whose values need to respected in order for the tree to remain balanced. Solution A states that we take the "left-most" child of the right child of the Node slated for deletion and promote that value to the Node whose current value is `0014`. 
+
+Let's attempt to see what that Tree looks like. Recall the Node for deletion is `0014` if we look at the right child of `0014` we see `0023`. Now, we are going to search for `0023`'s "left-most" child an replace `0014` with it. In this case the "left-most" child is easily found to be `0019`
+
+Let's remove the current `0019` Node and place the value `0019` where the `0014` currently sits. The Tree now looks like this.
+
+![tree-b](tree-b.png)
+
+This tree is valid!
+
+You will find the same concept holds true if you reverse the logic and take the "right-most" child of the left child of the Node slated for deletion.
+
+### What are some real worls uses for the Tree data strcuture?
+
+ 🤔
 
 
+## Resources
 
+- https://www.cs.usfca.edu/~galles/visualization/BST.html
+- https://www.youtube.com/watch?v=5cU1ILGy6dM
