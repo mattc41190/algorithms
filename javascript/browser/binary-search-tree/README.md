@@ -59,7 +59,7 @@ Node deletion is the trickiest part of dealing with a BST. There are four possib
 4. The Node slated for deletion has both a right and left child
 	- This operation is where nearly all of the complexity surrounding binary search trees occurs and thusly will have a slightly longer section explaining it.
 
-#### Deleting A Node Which Has a Left and Right Child
+#### Deleting A Node That Has a Left and Right Child
 
 The problem: We have a Tree and we want to remove a Node. However the Node we want to remove has a sub-Tree all of its own. How do we remove the Node without breaking the ordering of the tree structure and without accidentally creating any orphan Nodes. 
 
