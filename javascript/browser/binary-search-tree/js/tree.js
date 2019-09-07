@@ -1,3 +1,11 @@
+// Node is a value held by a Tree -- it contains its own value and references to its left and right children
+// Why it doesn't contain a reference to its parent is strange?
+function Node (value) {
+	this.value = value
+	this.left = null
+	this.right = null
+}
+
 // Tree is a Binary Search Tree -- call new Tree() to get one
 function Tree () {
 	this.root = null
@@ -169,22 +177,22 @@ Tree.prototype.remove = function(val) {
 					}
 				}
 			}
-
-
 		}
 
-		// Otherwise continue searching the tree
-		if (curNode.left != null) {
-			if (curNode.left.value >= val) {
-				curNode = curNode.left
-				continue
-			}
-		} else if (curNode.right != null) {
-			if (curNode.right.value <= val) {
-				curNode = curNode.right
-				continue
-			}
+				
+
+		// Search the tree
+		if (curNode.left != null && curNode.left.value >= val) {
+			console.log('lefty')
+			curNode = curNode.left
+			continue
+		} else if (curNode.right != null && curNode.right.value <= val) {
+			console.log('righty')
+			curNode = curNode.right
+			continue
+		} else {
+			return false
 		}
-	}
+	} 
 	
 }
