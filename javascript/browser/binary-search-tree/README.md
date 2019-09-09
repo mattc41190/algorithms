@@ -85,10 +85,11 @@ You will find the same concept holds true if you reverse the logic and take the 
 
 ### What are some real worls uses for the Tree data strcuture?
 
- 🤔
+ Here's what [StackOverflow](https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees#targetText=Binary%20search%20trees%20are%20used%20to%20implement%20set%20and%20map.&targetText=One%20of%20the%20most%20important,AVL%20trees) says about it.
 
 
 ## Resources
 
 - https://www.cs.usfca.edu/~galles/visualization/BST.html
 - https://www.youtube.com/watch?v=5cU1ILGy6dM
+- https://www.youtube.com/watch?v=nOcFiGl5Vy4

@@ -1,7 +1,6 @@
-
 # Deps
 target
-package.json
+node_modules
 
 # Generated Files and Dirs
 .DS_Store
