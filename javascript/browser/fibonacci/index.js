@@ -1,16 +1,12 @@
 console.log('Fibonacci Sequence')
 
-const INVLAID_INPUT = 'invalid input'
+const INVALID_INPUT = 'invalid input'
 
 const fib = (n) => n < 2 ? n : fib(n-1) + fib(n-2)
 
-let f = fib(5)
-console.log(f)
-
-
 const findFib = (n) => {
 	if (n < 1) {
-		console.error(INVLAID_INPUT, n)
+		console.error(INVALID_INPUT, n)
 		return null
 	}
 
@@ -28,7 +24,7 @@ const findFib = (n) => {
 
 const findFibRecurseDebugged = (n, side, depth) => {
 	if (n <= 0) {
-		console.error(INVLAID_INPUT, n)
+		console.error(INVALID_INPUT, n)
 		return null
 	}
 
